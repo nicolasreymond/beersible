@@ -1,0 +1,6 @@
+all:
+  hosts:
+    Scaleway:
+      ansible_host: 163.172.171.129
+      ansible_port: 22
+      ansible_user: root
