@@ -1,0 +1,26 @@
+- name: Install udpate
+  hosts: all
+  tasks:
+    - name: Install updates
+      apt:
+        update_cache: yes
+        upgrade: 'yes'
+        force_apt_get: yes
+      tags:
+        - install
+
+
+- name: Setup vm
+  hosts: all
+  roles:
+    - name: comfort
+  tags:
+    - comfort
+
+- name: Setup docker
+  hosts: all
+  roles:
+    - name: docker
+  tags:
+    - docker
+
